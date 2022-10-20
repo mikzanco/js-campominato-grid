@@ -5,9 +5,14 @@
 
 
 const container = document.querySelector('.container');
+// let elementsPerRow = 7;
+// let elementsPerRow = 8;
+// let elementsPerRow = 9;
+let elementsPerRow = 10;
 // creo il bottone che poi mi creerà la griglia
 document.getElementById('start').addEventListener('click', function(){
-    const elementsPerRow = 10;
+    // elementsPerRow = document.getElementById('dificult').value;
+    
     container.innerHTML = '';
     init(elementsPerRow);
 })
@@ -28,18 +33,23 @@ function createSquare(idSquare){
     const square = document.createElement('div');
     square.className = 'square'; 
     square.innerHTML = idSquare + 1;
-    square.idElement = idSquare + 1;
+    
+    square.style.width = generateCalcCss();
+    square.style.height = generateCalcCss();
     // aggiungo l'addEventListner per creare un click su tutte le celle
     square.addEventListener('click', clickSquare)
     container.append(square);
 }
 
+function generateCalcCss(){
+    return `calc(100% / ${elementsPerRow})`;
+}
+
+
 function clickSquare(){
     // con this ottengo l'elemento HTML che ho cliccato.
     console.log(this.idElement);
-    
-    
-    
+
 }
 
 
