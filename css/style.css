@@ -6,7 +6,28 @@
 
 body{
     
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header #dificult, #start{
+    padding: 4px;
+}
+
+main{
     background-color: aqua;
+}
+
+.logo{
+    margin: 25px;
+}
+
+.object{
+    margin: 25px;
 }
 
 .main-wrapper{
@@ -36,6 +57,8 @@ body{
 }
 
 
-
+footer{
+    display: flex;
+}
 
 
