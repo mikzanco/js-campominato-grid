@@ -12,9 +12,7 @@ document.getElementById('start').addEventListener('click', function(){
     init(elementsPerRow);
 })
 
-// const elementsPerRow = 10;
 
-// init(elementsPerRow);
 
 function init(numElements){
     // faccio il quadrato del numElements con pow per creare il numero giusto di quadrati
@@ -31,8 +29,17 @@ function createSquare(idSquare){
     square.className = 'square'; 
     square.innerHTML = idSquare + 1;
     square.idElement = idSquare + 1;
-    
+    // aggiungo l'addEventListner per creare un click su tutte le celle
+    square.addEventListener('click', clickSquare)
     container.append(square);
+}
+
+function clickSquare(){
+    // con this ottengo l'elemento HTML che ho cliccato.
+    console.log(this.idElement);
+    
+    
+    
 }
 
 
