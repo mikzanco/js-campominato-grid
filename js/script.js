@@ -6,15 +6,15 @@
 
 const container = document.querySelector('.container');
 // creo il bottone che poi mi creerà la griglia
-// document.getElementById('start').addEventListener('click', function(){
-    
-//     container.innerHTML = '';
-    
-// })
+document.getElementById('start').addEventListener('click', function(){
+    const elementsPerRow = 10;
+    container.innerHTML = '';
+    init(elementsPerRow);
+})
 
-const elementsPerRow = 10;
+// const elementsPerRow = 10;
 
-init(elementsPerRow);
+// init(elementsPerRow);
 
 function init(numElements){
     // faccio il quadrato del numElements con pow per creare il numero giusto di quadrati
@@ -34,5 +34,7 @@ function createSquare(idSquare){
     
     container.append(square);
 }
+
+
 
 
