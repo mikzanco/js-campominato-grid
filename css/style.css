@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-color: aqua;
+}
+
+.main-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    
+    height: 600px;
+    width: 600px;
+}
+
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+
+
+
+
